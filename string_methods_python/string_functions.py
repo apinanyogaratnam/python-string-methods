@@ -312,28 +312,7 @@ def count(word, substring): # string method OP (optional parameters)
     return counter
 
 
-def count(word, substring, start_index): # string method OP (optional parameters)
-    """Return the number of non-overlapping occurrences of substring sub in the
-    range [start, end]. Optional arguments start and end are interpreted as in
-    slice notation.
-
-    >>> count("Hello", "l", 1)
-    2
-    >>> count("Hello", "Hell", 1)
-    0
-    
-    """
-    # return word.count(substring)
-
-    counter = 0
-    word = word[start_index:]
-    for i in range(len_copy(word)):
-        if word[i:len_copy(substring)+i] == substring:
-            counter += 1
-    return counter
-
-
-def count(word, substring, start_index, end_index):
+def count(word, substring, start_index, end_index=-1): # string method OP (optional parameters)
     """Return the number of non-overlapping occurrences of substring sub in the
     range [start, end]. Optional arguments start and end are interpreted as in
     slice notation.
